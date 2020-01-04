@@ -8,12 +8,16 @@ use Illuminate\Http\Request;
 class ListController extends Controller
 {
     public function homePage(){
-        return view('list-item');
+        $items= Item::all();
+        return view('list-item', ['items'=>$items]);
     }
     public function addNewItem(request $request){
         $items= new Item();
         $items->item= $request->text;
         $items->save();
-        return 'done';
+    }
+    public function deletItem(Request $request){
+        Item::where('id', $request->id)->delete();
+        return $request->all();
     }
 }

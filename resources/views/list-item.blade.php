@@ -21,14 +21,14 @@
             <h2>Ajax Crud Operation</h2>
             <div class="panel panel-default">
                 <div class="panel-heading" >Item List<a href="#" id="newItem" class="pull-right" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus-circle"></i></a></div>
-                <div class="panel-body">
-                    <ul class="list-group">
-                        <li class="list-group-item ouritem active" data-toggle="modal" data-target="#exampleModal">Cras justo odio</li>
-                        <li class="list-group-item ouritem" data-toggle="modal" data-target="#exampleModal">Dapibus ac facilisis in</li>
-                        <li class="list-group-item ouritem" data-toggle="modal" data-target="#exampleModal">Morbi leo risus</li>
-                        <li class="list-group-item ouritem" data-toggle="modal" data-target="#exampleModal">Porta ac consectetur ac</li>
-                        <li class="list-group-item ouritem" data-toggle="modal" data-target="#exampleModal">Vestibulum at eros</li>
-                    </ul>
+                <div class="panel-body" id="items">
+                     <ul class="list-group">
+                         @foreach($items as $item)
+                            <li class="list-group-item ouritem active" data-toggle="modal" data-target="#exampleModal">{{ $item->item }}
+                                <input type="hidden" id="itemId" value="{{ $item->id }}"/>
+                            </li>
+                         @endforeach
+                     </ul>
                 </div>
             </div>
         </div>
@@ -46,13 +46,14 @@
                 </button>
             </div>
             <div class="modal-body">
+                <input type="hidden" id="id"/>
                 <input type="text" placeholder="Write Your Item" id="addItem" class="form-control">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal" style="display: none">Close</button>
-                <button type="button" class="btn btn-danger" id="deleteButton" style="display: none">Delete</button>
+                <button type="button" class="btn btn-danger" id="deleteButton" data-dismiss="modal" style="display: none">Delete</button>
                 <button type="button" class="btn btn-primary" id="editButton" style="display: none">Save changes</button>
-                <button type="button" class="btn btn-success" id="addButton">Add Item</button>
+                <button type="button" class="btn btn-success" id="addButton" data-dismiss="modal">Add Item</button>
             </div>
         </div>
     </div>
@@ -67,18 +68,20 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-       $('.ouritem').each(function () {
-            $(this).click(function (event) {
+
+        $(document).on('click', '.ouritem', function (event) {
                 var txt= $(this).text();
+                var id= $(this).find('#itemId').val();
                 $('#addItem').val(txt);
                 $('#title').text('Edit Item');
                 $('#editButton').show(200);
                 $('#deleteButton').show(200);
                 $('#addButton').hide();
-            });
+                $('#id').val(id);
+                //console.log(id);
         });
 
-        $('#newItem').click(function (event) {
+        $(document).on('click', '#newItem', function (event) {
                 $('#addItem').val('');
                 $('#title').text('Add Item');
                 $('#editButton').hide();
@@ -90,7 +93,16 @@
             var text= $('#addItem').val();
             $.post('addItem', {'text': text, '_token':$('input[name=_token]').val()}, function (data) {
                 console.log(data);
+                $('#items').load(location.href + ' #items');
             });
+        });
+
+        $('#deleteButton').click(function (event) {
+            var id= $('#id').val();
+            $.post('deleteItem', {'id': id, '_token':$('input[name=_token]').val()}, function (data) {
+                $('#items').load(location.href + ' #items');
+                console.log(data);
+            })
         });
 
     });
