@@ -52,7 +52,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal" style="display: none">Close</button>
                 <button type="button" class="btn btn-danger" id="deleteButton" data-dismiss="modal" style="display: none">Delete</button>
-                <button type="button" class="btn btn-primary" id="editButton" style="display: none">Save changes</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="editButton" style="display: none">Save changes</button>
                 <button type="button" class="btn btn-success" id="addButton" data-dismiss="modal">Add Item</button>
             </div>
         </div>
@@ -100,6 +100,15 @@
         $('#deleteButton').click(function (event) {
             var id= $('#id').val();
             $.post('deleteItem', {'id': id, '_token':$('input[name=_token]').val()}, function (data) {
+                $('#items').load(location.href + ' #items');
+                console.log(data);
+            })
+        });
+
+        $('#editButton').click(function (event) {
+            var id= $('#id').val();
+            var value= $('#addItem').val();
+            $.post('editItem', {'id': id, 'value': value, '_token':$('input[name=_token]').val()}, function (data) {
                 $('#items').load(location.href + ' #items');
                 console.log(data);
             })
