@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'ListController@homePage');
+Route::get('/list', 'ListController@homePage');
 Route::post('/addItem', 'ListController@addNewItem');
 Route::post('/deleteItem', 'ListController@deletItem');
 Route::post('/editItem', 'ListController@editItem');
+Route::get('/searchItem', 'ListController@searchItem');

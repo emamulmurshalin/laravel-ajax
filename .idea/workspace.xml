@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00d4a825-af85-4859-82f3-2cb8407bcaf4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/list-item.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/list-item.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -22,8 +21,8 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="49" />
+            <state relative-caret-position="200">
+              <caret line="17" column="10" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -32,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ListController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="411">
-              <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+              <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
               <folding>
                 <element signature="e#40#53#0#PHP" expanded="true" />
               </folding>
@@ -43,8 +42,8 @@
       <file leaf-file-name="list-item.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/list-item.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="54" column="82" selection-start-line="54" selection-start-column="82" selection-end-line="54" selection-end-column="82" />
+            <state relative-caret-position="261">
+              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
               <folding>
                 <element signature="e#2427#2434#1#HTML" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -68,8 +67,8 @@
         <option value="$PROJECT_DIR$/app/Item.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/config/database.php" />
-        <option value="$PROJECT_DIR$/resources/views/list-item.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/list-item.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ListController.php" />
       </list>
     </option>
@@ -173,7 +172,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="817" />
@@ -284,12 +283,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578080533026</updated>
-      <workItem from="1578080535306" duration="17046000" />
+      <workItem from="1578080535306" duration="22135000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17046000" />
+    <option name="totallyTimeSpent" value="22135000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -377,10 +376,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/list-item.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="54" column="82" selection-start-line="54" selection-start-column="82" selection-end-line="54" selection-end-column="82" />
+        <state relative-caret-position="261">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
           <folding>
             <element signature="e#2427#2434#1#HTML" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -390,17 +396,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ListController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="411">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
           <folding>
             <element signature="e#40#53#0#PHP" expanded="true" />
           </folding>
